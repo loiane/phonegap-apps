@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>GitHub RepoFinder</title>
+    </head>
+    <body>
+        <div class="app">
+            <div data-role="page">
+                <header data-role="header">
+                    <h1>RepoFinder</h1>
+                </header>
+
+                <div data-role="content">
+                    <form>
+                        <input id="search_input" type="text" data-type="search" placeholder="Search by User...">
+                        <button type="button" id="search_btn">Search</button>
+                    </form>
+
+                    <div id="user_info"></div>
+
+                    <ul id="search_list" data-role="listview"></ul>
+
+                    <br><br>
+                    <h3>Latest Repos</h3>
+                    <form class="ui-filterable">
+                        <input type="text" data-type="search" id="filterBasic-input" placeholder="Filter Items...">
+                    </form>
+                    <ul id="repo_list" data-role="listview" data-filter="true" data-input="#filterBasic-input"></ul>
+
+
+                </div>
+
+                <footer data-role="footer">
+                    <h3>Copyright &copy; 2015</h3>
+                </footer>
+
+            </div>
+            
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+         <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+      
+    </body>
+</html>
