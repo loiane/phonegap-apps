@@ -13,7 +13,7 @@
     <body>
        <div data-role="page" id="main">
         <div data-role="header">
-            <h1>ChannelVidz</h1>
+            <h1>ChannelVidz</h1><a href="#options" data-icon="gear" class="ui-btn-right">Options</a>
         </div>
 
         <div data-role="content">
@@ -22,6 +22,46 @@
             <div id="showVideo"></div>
             <br><br>
             <ul id="vidlist" data-role="listview"></ul>
+        </div>
+
+        <div data-role="footer">
+            <h4>ChannelVidz &copy; 2015</h4>
+        </div>
+
+         <div data-role="popup" id="popupDialog" data-overlay-theme="a" data-theme="c" data-dismissible="false" style="max-width:400px;" class="ui-corner-all">
+        <div data-role="header" data-theme="a" class="ui-corner-top">
+             <h1>Add Channel</h1>
+        </div>
+        <div data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
+             <h3 class="ui-title">Please enter a channel name</h3>
+
+            <input type="text" id="channelName" placeholder="Channel Name" />
+            <a id="channelBtnCancel" href="#" data-role="button" data-inline="true" data-rel="back" data-theme="c">Cancel</a>
+            <a id="channelBtnOK" href="#" data-role="button" data-inline="true" data-rel="back" data-transition="flow" data-theme="b">OK</a>
+        </div>
+    </div>
+       </div>
+
+
+       <div data-role="page" id="options">
+        <div data-role="header">
+           <a href="#main" data-icon="delete">Cancel</a> <h1>Options</h1><a href="#" id="saveOptions" data-icon="check" data-theme="b">Save</a>
+        </div>
+
+        <div data-role="content">
+            <div data-role="fieldcontain">
+                <label for="channelNameOptions">Channel Name:</label>
+                <input type="text" name="channelNameOptions" id="channelNameOptions" placeholder="Enter Channel name">
+                <br>
+                <div class="ui-btn ui-input-btn ui-shadow">
+                    Clear Channel
+                    <input type="button" id="clearChannel" data-corners="false" data-enhanced="true" value="Clear Channel">
+                </div>
+            </div>
+            <div data-role="fieldcontain">
+                <label for="maxResultsOptions">Max Results:</label>
+                <input type="text" id="maxResultsOptions" name="maxResultsOptions" placeholder="Enter Max Results">
+            </div>
         </div>
 
         <div data-role="footer">
